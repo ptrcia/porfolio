@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Trabajo Final: La Gran Riada de San Miguel
+Autora: Patricia S: Gracia Artero
+Asignatura:Programación Web
+Máster en Artes Visuales y Multimedia
+Universidad Plitécnica de Valencia
+Año: 2020 -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="css/main.css" type="text/css" rel="stylesheet">
+        <script src="js/script.js" async></script>        
+        <title>La Gran Riada de San Miguel</title>
+    </head>
+    <body>
+
+        <div class="header">
+            <h1>La Gran Riada de San Miguel</h1>
+            <h2 id="h2">Cartagena, 1919.</h2>
+            <h3></h3>
+        </div>
+        <hr>
+        <!-- Div para contener las imágenes -->
+        <div class="imagenes"> 
+
+            <img src="media/img1.jpg" id="test" alt="Imágenes" title="Imagen de la gran riada" height="500"/>
+
+        </div>
+        <!-- Div para contener los botones -->
+        <div class="button">            
+            <p id="demo">Imágenes de la gran inundación que sacudió hasta los cimientos la ciudad de Cartagena</p>
+            <button id="bot1" type="button">Zona del Almarjal</button>
+            <button id="bot2" type="button">Calle Ángel Bruna</button>
+            <button id="bot3" type="button">Calle del Carmen</button>
+            <button id="bot4" type="button">Fonda Francesa</button>
+            <button id="bot5" type="button">Ayuntamiento Lateral</button>
+            <button id="bot6" type="button">Plaza del Ayuntamiento</button>
+            <button id="bot7" type="button">Calle Mayor</button>
+            <button id="bot8" type="button">Cerro Despeñaperros</button>
+            
+        </div>
+        <hr>
+        <!-- Div para contener el tema del sonido -->
+        <div>            
+            <img src="media/sonido.png" width="20px"id="sonido" alt="audio" title="Imagen de Audio"/>
+            <button onclick="playAudio()" type="button">Activa el audio</button>
+            <button onclick="pauseAudio()" type="button">Pausa el audio</button> 
+            <audio id="myAudio" src="media/water.mp3" loop > 
+        </div>
+        <hr>
+        <!-- Div para contener los textos de abajo junto con el mapa -->
+        <div class="descripcion">
+            <h3>Descripción</h3>
+                <p>Esta pequeña web pretende recoger unas imágenes de lo que fue una de las mayores inundaciones documentadas de la ciudad de Cartagena.</p>
+                <p>La Gran Riada de San Miguel se dio un 29 de noviembre de 1919. Fue una de las inundaciones documentadas más masiva hasta la fecha. Debido a la naturaleza del sur y suroeste peninsular, en la época otoñal se dan las condiciones para que se produzca una DANA. Una DANA es un efecto meteorológico provocado por el choque de temperaturas frías y cálidas que da como consecuencias fuertes lluvias.
+                Estas inundaciones provocaron el desbordamiento de la rambla, la cual entró con relativa facilidad a la ciudad. Causó también problemas de drenaje en la ciudad debido a las malas condiciones de las infraestructuras y, finalmente, la subida abrupta del nivel del mar hizo el resto. El resultado, como se puede ver en las fotos, resulto  en unas condiciones muy precarias en las estructuras de la ciudad.
+                </p>
+                <p>Proyecto final para la asignatura de Programación Web del máster en Artes Visuales y Multimedia de la Universidad Politécnica de Valencia. 2020.</p>
+            <h3>Mapa</h3>
+                <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25282.803332100393!2d-1.0060170009721958!3d37.61744435012159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd634222a43ab56d%3A0x47d790cefef6f9ff!2sCartagena%2C%20Murcia!5e0!3m2!1ses!2ses!4v1607022179566!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <h3>"Cartagena 1919. El año de la gran inundación."</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qCz4fmY97WI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>s
+            <h3>Referencias</h3>
+                <p>Artículo de Ángel Rojas Penalva e imágenes de Salvador Zamora. Imágenes e información recogidas de: 
+                    <a href="https://cartagenaantigua.wordpress.com/2013/06/01/inundaciones-la-borrasca-de-santa-catalina/" target="blank">cartagenaantigua.wordpress.com</a>  y  
+                    <a href="https://www.laverdad.es/murcia/cartagena/cien-anos-gran-20190928004310-ntvo.html" target="blank">laverdad.es</a>
+                </p></p>
+            <p>Poema de Miguel de Cervantes a la ciudad de Cartagena: <a href="https://museosnavalesymaritimos2.files.wordpress.com/2013/11/ruta_escritores_18.jpg" target="blank">Enlace</a> </p>
+
+        </div>
+        <!-- Div para contener el footer -->
+        <div class="footer">
+            <p>Patricia S. Gracia Artero // <a target="_blank" href="mailto:patriciagraciaartero@gmail.com">Contacto e-mail</a> </p>            
+        </div>
+    </body>
+    </html>
+    

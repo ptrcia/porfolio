@@ -1,0 +1,73 @@
+body{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(59, 59, 59);
+    font-family: 'Padauk', sans-serif;
+    font-style: normal;
+    font-size: medium;
+    font-weight: lighter;
+}
+/* Estilos de los botones */
+ button {
+    background-color: #cccccc; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  /* Estilo de el pie de foto */
+#demo{
+  font-family: 'Padauk', sans-serif;
+  font-size: 18px;
+}
+/* Márgenes de los textos inferiores */
+  .descripcion{
+    margin:0px 300px 0px 300px;
+
+  }
+
+  /* ENLACES */
+  a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+  }
+  
+  a:link {
+    color: #a0cfeb;
+  }
+  
+  a:visited {
+    color: #93b5cc;
+  }
+  
+  a:focus {
+    border-bottom: 1px solid;
+    background: #a9b2b4;
+  }
+  
+  a:hover {
+    border-bottom: 1px solid;     
+    background: #ffffff3b;
+  }
+  
+  a:active {
+    background: #012b53;
+    color: #ffffff;
+  }
+
+  /* footer */
+
+  .footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+    color: rgb(255, 255, 255);
+    text-align: center;
+ }

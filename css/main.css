@@ -1,0 +1,451 @@
+/* GENERAL */
+*{box-sizing: border-box;} 
+
+body {
+    
+    background-color: rgb(0, 0, 0);
+    color: snow;
+    font-size: medium;
+    font-family: 'Montserrat', sans-serif;
+}    
+
+p{
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+table{
+  margin-left: 4%;
+  margin-right: 0%;
+}
+
+  model-viewer {
+    width: 90%;
+    object-fit: cover;
+    display: block;
+    min-height: 10px;
+    min-height:90vh;}
+  model-viewer#reveal {
+    --poster-color: transparent;
+  }
+
+.imgRecort{
+  width:300px;
+  height:300px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  min-height: 10px;
+  min-height:60vh;
+  /*max-height:60vh;*/
+
+} 
+.imgRecortBio{
+  width:300px;
+  height:300px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  min-height:50px;
+  min-height:40vh;
+} 
+
+/* Sidebar en el Header para la navegación vertical */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #e2e2e2;
+  position: fixed;
+  height: 100%;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Cosas del body */
+h1 {
+  font-weight: bold !important;
+  font-size: medium;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* Los puntos del nav */
+::marker{
+  color: #000;
+}
+div.header {
+margin-right: 180px;
+padding: 1px 5px;
+}
+
+/* El logo ahora no es una imagen si ni letras */
+.logo-container {
+  display: inline-block;
+  /*padding: 10px 10px;*/
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+}
+.logo-container > img {
+  width: 40px;
+}
+
+/* Enlaces y lista */
+.header > ul {
+  list-style-type: none;
+  padding: 0px, 0px, 0px, 0px;
+}
+
+.header > ul > li {
+  /* display: inline-block; */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.header > ul > li a:link {
+  color: #b6b6b6;
+}
+
+.header > ul > li a:visited {
+  color: #f3f3f3;
+}
+
+.header > ul > li a:hover {
+  border-bottom: 3px solid;
+  background-color: #a8a8a821;
+}
+
+.header > ul > li a:active {
+  background: #ffffff46;
+  color: #ffffff;
+}
+
+/* Ajustes de los bloques de trabajos */
+div.trabajos {
+  margin-left: 200px;
+}
+div.trabajos img {
+  width: 80%;
+  text-align:center;
+
+}
+div.trabajo {
+  /*text-align:center;*/
+  background-color: rgba(177, 177, 177, 0.178);
+  /* Técnica básica:
+  min-height:700px; */
+  min-height:700px;
+  min-height: 93vh;
+}
+
+div.trabajo > p {
+   min-height:300px; 
+}
+
+
+/* Enlaces del apartado de trabajos */
+div.trabajos a:link {
+  color: #000000 !important;
+  font-weight: bold;
+  background-color:rgba(255, 255, 255, 0.8);  
+  text-decoration: none;
+  /* padding: 1%; */
+}  
+div.trabajos a:hover {
+  border-bottom: 3px solid;
+  background-color:#ffffff7e;
+  color: rgba(0, 0, 0, 0.9);
+}
+div.trabajos a:active {
+  background: #1abc9c6c;
+}
+/* Centrar texto en contacto y bio */
+div.contact {
+  text-align:center;
+}
+
+div.bio a:link {
+  color: #000000 !important;
+  font-weight: bold;
+  background-color:rgba(255, 255, 255, 0.8);  
+  text-decoration: none;
+  /* padding: 1%; */
+}  
+div.bio a:hover {
+  border-bottom: 3px solid;
+  background-color:#ffffff7e;
+  color: rgba(0, 0, 0, 0.9);
+}
+div.bio a:active {
+  background: #1abc9c6c;
+}
+/* Apartado que engloba todo para compartir propiedades 
+.wrapper { 
+  width:100%;
+	margin: 0 auto;
+}*/
+
+/* Crear filas para organizar el espacio */
+.row { /*El row es para saltr filas*/
+	clear: both;
+  height: 100%; /*esto no hace nada*/
+}
+
+/* Organizo el espacio en columnas y le proporciono las columnas necesarias a cada apartado según su tamaño */
+.col {
+	float:left;
+	margin-left: 0.7%;
+	width: 90%;
+  height: 100%;
+  display: table;
+}/**/
+
+.col-2 { width: 14.5833333333%;}
+.col-3 { width: 23.9166666667%;}
+.col-4 { width: 31.25%;}
+.col-5 { width: 39.5833333332%;}
+.col-6 { width: 47.9166666665%;}
+.col-7 { width: 56.25%;}
+.col-8 { width: 64.5833333331%;}
+.col-9 { width: 72.9166666664%;}
+.col-10 { width: 81.25%;}
+.col-11 { width: 89.5833333%;}
+.col-12 { width: 99.91666663%;}
+
+/* División para pantalla 992px */
+@media screen and (max-width: 992px){
+/*Aqui tambiamos la barra de navegación a horizontal*/
+  .sidebar {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    background-color: white !important;
+    text-align: center;
+  }
+
+  .sidebar ul {
+    justify-content: center;    
+    width: 100%;
+    padding-right: 40px;
+  }
+
+  .sidebar ul li {
+    display: inline-block;  
+  }
+
+  .sidebar ul li a {
+    display: block;
+    padding: 5px;
+    font-weight: bold;
+  }
+
+  div.header {
+    margin-right: 0;
+    padding: 0px 0px;
+    background-color: white;
+    }
+
+  .trabajos {
+    margin-left: 0 !important;
+  }
+  div.trabajo {
+    min-height:400px;
+  }
+
+  .col-l {
+    float: left;
+    margin-left: 2.08333333%;
+    width: 6.25%;
+  }
+
+  .wrapper {
+    width:80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-right: 2.08333333%;
+  }
+
+  .col-2 { width: 14.5833333333%;}
+  .col-3 { width: 49.3%;} /*Esto era 22.9166666667*/
+  .col-4 { width: 32%;}/*31.25*/
+  .col-5 { width: 39.5833333332%;}
+  .col-6 { width: 47.9166666665%;}
+  .col-7 { width: 56.25%;}
+  .col-8 { width: 64.5833333331%;}
+  .col-9 { width: 72.9166666664%;}
+  .col-10 { width: 81.25%;}
+  .col-11 { width: 89.5833333%;}
+  .col-12 { width: 97.91666663%;} /*Esto era 99....*/
+      
+  }
+/* División para pantalla 786px */
+@media screen and (max-width: 768px){
+.logo-container{
+  display: none;
+}
+.wrapper {
+	width:100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-right: 2.08333333%;
+}
+
+.col-m {
+	float: left;
+	margin-left: 2.08333333%;
+	width: 6.25%;	 
+}
+    
+.col-2 { width: 14.5833333333%;}
+.col-3 { width: 97.3%;} /*esto era 22.9166666667*/ /*Aqui creo que la he fastidiado poniendo un 90 y pico*/
+.col-4 { width: 99%;}/*31.25*/
+.col-5 { width: 39.5833333332%;}
+.col-6 { width: 47.9166666665%;}
+.col-7 { width: 56.25%;}
+.col-8 { width: 64.5833333331%;}
+.col-9 { width: 72.9166666664%;}
+.col-10 { width: 81.25%;}
+.col-11 { width: 89.5833333%;}
+.col-12 { width: 97.91666663%;} /*Esto era 99....*/
+}
+/* División para pantalla 576px */
+@media screen and (max-width: 576px){
+
+.wrapper {
+	width:100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-right: 2.08333333%;
+} 
+
+.col-s {
+	float: left;
+	margin-left: 2.08333333%;
+	width: 6.25%;
+}
+
+.col-2-s { width: 14.5833333333%;}
+.col-3-s { width: 22.9166666667%;}
+.col-4-s { width: 31.25%;}/*31.25*/
+.col-5-s { width: 39.5833333332%;}
+.col-6-s { width: 47.9166666665%;}
+.col-7-s { width: 56.25%;}
+.col-8-s { width: 64.5833333331%;}
+.col-9-s { width: 72.9166666664%;}
+.col-10-s { width: 81.25%;}
+.col-11-s { width: 89.5833333%;}
+.col-12-s { width: 97.91666663%;}
+}
+
+/* Navegador */
+/* Dropdown Button */
+.dropbtn {
+  /*background-color: #4CAF50;
+  color: black;*/
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type=email], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4caf99;
+  color: rgb(255, 255, 255);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color:#4CAF50;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #383838;
+  padding: 20px;
+  width: 50%;
+  display:inline-block;
+
+}

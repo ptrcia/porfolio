@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link  rel="icon"   href="../images/PGAfavicon.png" type="image/png"/>
+        <title>
+            Patricia Gracia / Porfolio
+        </title>
+    </head>
+
+    <body>
+      <div class="row">
+        <div class="header"> 
+          <div class="sidebar"> 
+                <!-- una foto por pagina con alt  -->
+            <a class = "logo-container" href="../index.html" alt="Inicio" >PGA</a>               
+            <h1>Patricia Gracia <br> Porfolio</h1>              
+            <ul><div class="dropdown">
+              <li><a href="../index.html">Trabajos</a></li>
+                    <!--Subapartado-->
+                <div class="dropdown-content">
+                  <a href="../pages/arte.html">Artes Plásticas</a>
+                  <a href="../pages/3D.html">Modelado 3D</a>
+                  <a href="../pages/entorno.html">Entornos Interactivos</a>
+                  <a href="../pages/web.html">Web y Transmedia</a>
+                </div>
+              </div>
+              <!--Subapartado-->
+            <li><a href="../pages/contact.html">Contacto</a></li>
+            <li><a href="../pages/bio.html">Biografía</a></li>
+            </ul>
+          </div> 
+        </div> 
+      </div>
+      <!-- <div class="row"> -->
+        <!-- <div class="col col-12"> -->
+          <div class="trabajos">
+            <!-- <div class="row"> -->
+              <!-- <div class="col col-6 col-12-l"> -->
+                <div class="trabajo"style="padding-left: 15%;">
+                    <br>
+                    <model-viewer
+                      camera-orbit="100deg 60deg 1m"
+                      camera-target="2m 2.5m -2.5m"
+                      ar 
+                      src="../images\modelos\Hospital.glb" 
+                      alt="Modelado 3D" 
+                      auto-rotate camera-controls>
+                    </model-viewer>
+                </div>
+          </div>
+    </body>
+</html>

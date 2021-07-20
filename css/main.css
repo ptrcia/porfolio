@@ -53,6 +53,17 @@ table{
   min-height:50px;
   min-height:40vh;
 } 
+.imgRecortDig{
+  width:300px;
+  height:300px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  min-height:60px;
+  min-height:60vh;
+} 
 
 /* Sidebar en el Header para la navegación vertical */
 .sidebar {
@@ -161,9 +172,20 @@ div.trabajo {
   min-height:700px;
   min-height: 93vh;
 }
+div.trabajoArt {
+  /*text-align:center;*/
+  background-color: rgba(177, 177, 177, 0.178);
+  /* Técnica básica:
+  min-height:700px; */
+  min-height:700px;
+  min-height: 93vh;
+}
 
 div.trabajo > p {
    min-height:300px; 
+}
+div.trabajoArt > p {
+  min-height:150px; 
 }
 
 

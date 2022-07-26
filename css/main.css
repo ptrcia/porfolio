@@ -28,6 +28,18 @@ table{
     --poster-color: transparent;
   }
 
+  .redondo{
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 5px;
+    margin-top: 3px;
+  }
+
+  /*#extrapablo{
+    text-align: center;
+    float: left;
+  }*/
+
   .imgRecort{
   width:300px;
   height:300px;

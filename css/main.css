@@ -1,88 +1,98 @@
 /* GENERAL */
-*{box-sizing: border-box;} 
+* {
+  box-sizing: border-box;
+}
 
 body {
-    background-color: rgb(0, 0, 0);
-    color: snow;
-    font-size: medium;
-    font-family: 'Montserrat', sans-serif;
-}    
+  /* background-color: rgb(50, 50, 0); */
+  /*background-color: #594F42;*/
+  background-color: #663E3E;
+  color: snow;
+  /*color texto*/
+  font-size: large;
+  /*no me comvence, cambiar a medium*/
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/ /*esta me gusta*/
+  font-family: 'IBM Plex Mono', monospace;
 
-p{
+}
+
+p {
   margin-left: 3%;
   margin-right: 3%;
 }
 
-table{
+table {
   margin-left: 4%;
   margin-right: 0%;
 }
 
-  model-viewer {
-    width: 90%;
-    object-fit: cover;
-    display: block;
-    min-height: 10px;
-    min-height:90vh;}
-  model-viewer#reveal {
-    --poster-color: transparent;
-  }
+model-viewer {
+  width: 90%;
+  object-fit: cover;
+  display: block;
+  min-height: 10px;
+  min-height: 90vh;
+}
 
-  .redondo{
-    padding-left: 4px;
-    padding-right: 4px;
-    border-radius: 5px;
-    margin-top: 3px;
-  }
-  #myBtn{
-    border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-size:x-small;
-    background-color: lightgray;
-  }
-  
-  #more {display: none;}
+model-viewer#reveal {
+  --poster-color: transparent;
+}
 
-  /*#extrapablo{
-    text-align: center;
-    float: left;
-  }*/
+.redondo {
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  margin-top: 3px;
+}
 
-  .imgRecort{
-  width:300px;
-  height:300px;
+#myBtn {
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: x-small;
+  background-color: lightgray;
+}
+
+#more {
+  display: none;
+}
+
+.imgRecort {
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   min-height: 10px;
-  min-height:60vh;
+  min-height: 60vh;
   /*max-height:60vh;*/
 
-} 
-.imgRecortBio{
-  width:300px;
-  height:300px;
+}
+
+.imgRecortBio {
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  min-height:50px;
-  min-height:40vh;
-} 
-.imgRecortDig{
-  width:300px;
-  height:300px;
+  min-height: 50px;
+  min-height: 40vh;
+}
+
+.imgRecortDig {
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  min-height:60px;
-  min-height:60vh;
-} 
+  min-height: 60px;
+  min-height: 60vh;
+}
 
 /* Sidebar en el Header para la navegación vertical */
 .sidebar {
@@ -92,45 +102,67 @@ table{
   background-color: #e2e2e2;
   position: fixed;
   height: 100%;
+
+  border-top-left-radius: 8px;   /* Esquina superior izquierda */
+  border-top-right-radius: 8px;  /* Esquina superior derecha */
+  border-bottom-right-radius: 8px; /* Esquina inferior derecha */
+  border-bottom-left-radius: 8px;  /* Esquina inferior izquierda */
 }
 
+/*el enlace de la barra lateral y los desplegables*/
 .sidebar a {
   display: block;
-  color: black;
+  color: rgb(0, 0, 0);
   padding: 16px;
   text-decoration: none;
 }
 
-.sidebar a.active {
+/*creo que esto no funciona*/
+/*.sidebar a.active {
   background-color: #4CAF50;
   color: white;
-}
+}*/
 
 .sidebar a:hover:not(.active) {
   background-color: #555;
   color: white;
 }
 
-/* Cosas del body */
+/* Cosas del body: menú */
+/*Patricia Gracia Artero Porfolio*/
 h1 {
-  font-weight: bold !important;
-  font-size: medium;
-  font-family: 'Montserrat', sans-serif;
-  color: #000;
+  font-weight: bold;
+  font-size: larger;
+  /*font-family: 'Montserrat', sans-serif;*/
+  /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #8a8324;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 /* Los puntos del nav */
-::marker{
-  color: #000;
-}
-div.header {
-margin-right: 180px;
-padding: 1px 5px;
+::marker {
+  color: #beb862;
 }
 
-/* El logo ahora no es una imagen si ni letras */
+div.header {
+  margin-right: 180px;
+  padding: 1px 5px;
+
+  border-top-left-radius: 50px;
+  /* Esquina superior izquierda */
+  border-top-right-radius: 50px;
+  /* Esquina superior derecha */
+  border-bottom-right-radius: 50px;
+  /* Esquina inferior derecha */
+  border-bottom-left-radius: 50px;
+  /* Esquina inferior izquierda */
+
+}
+
+/* El logo ahora no es una imagen si no letras */
 .logo-container {
   display: inline-block;
   /*padding: 10px 10px;*/
@@ -138,38 +170,46 @@ padding: 1px 5px;
   margin-left: 30px;
   margin-right: 30px;
   text-align: center;
+
+
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  padding: 16px;
 }
-.logo-container > img {
+
+.logo-container>img {
   width: 40px;
 }
 
 /* Enlaces y lista */
-.header > ul {
+.header>ul {
   list-style-type: none;
   padding: 0px, 0px, 0px, 0px;
 }
 
-.header > ul > li {
+.header>ul>li {
   /* display: inline-block; */
   color: white;
   text-align: center;
   text-decoration: none;
 }
 
-.header > ul > li a:link {
+.header>ul>li a:link {
   color: #b6b6b6;
 }
 
-.header > ul > li a:visited {
+.header>ul>li a:visited {
   color: #f3f3f3;
 }
 
-.header > ul > li a:hover {
+.header>ul>li a:hover {
   border-bottom: 3px solid;
   background-color: #a8a8a821;
 }
 
-.header > ul > li a:active {
+.header>ul>li a:active {
   background: #ffffff46;
   color: #ffffff;
 }
@@ -178,33 +218,56 @@ padding: 1px 5px;
 div.trabajos {
   margin-left: 200px;
 }
+
 div.trabajos img {
   width: 80%;
-  text-align:center;
+  text-align: center;
+
+  border-top-left-radius: 8px;
+  /* Esquina superior izquierda */
+  border-top-right-radius: 8px;
+  /* Esquina superior derecha */
+  border-bottom-right-radius: 8px;
+  /* Esquina inferior derecha */
+  border-bottom-left-radius: 8px;
+  /* Esquina inferior izquierda */
 
 }
+
 div.trabajo {
   /*text-align:center;*/
   background-color: rgba(177, 177, 177, 0.178);
   /* Técnica básica:
   min-height:700px; */
-  min-height:700px;
+  min-height: 700px;
   min-height: 93vh;
+
+  border-top-left-radius: 8px;
+  /* Esquina superior izquierda */
+  border-top-right-radius: 8px;
+  /* Esquina superior derecha */
+  border-bottom-right-radius: 8px;
+  /* Esquina inferior derecha */
+  border-bottom-left-radius: 8px;
+  /* Esquina inferior izquierda */
+
 }
+
 div.trabajoArt {
   /*text-align:center;*/
   background-color: rgba(177, 177, 177, 0.178);
   /* Técnica básica:
   min-height:700px; */
-  min-height:700px;
+  min-height: 700px;
   min-height: 93vh;
 }
 
-div.trabajo > p {
-   min-height:300px; 
+div.trabajo>p {
+  min-height: 300px;
 }
-div.trabajoArt > p {
-  min-height:150px; 
+
+div.trabajoArt>p {
+  min-height: 150px;
 }
 
 
@@ -212,38 +275,44 @@ div.trabajoArt > p {
 div.trabajos a:link {
   color: #000000 !important;
   font-weight: bold;
-  background-color:rgba(255, 255, 255, 0.8);  
+  background-color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   /* padding: 1%; */
-}  
+}
+
 div.trabajos a:hover {
   border-bottom: 3px solid;
-  background-color:#ffffff7e;
+  background-color: #ffffff7e;
   color: rgba(0, 0, 0, 0.9);
 }
+
 div.trabajos a:active {
   background: #1abc9c6c;
 }
+
 /* Centrar texto en contacto y bio */
 div.contact {
-  text-align:center;
+  text-align: center;
 }
 
 div.bio a:link {
   color: #000000 !important;
   font-weight: bold;
-  background-color:rgba(255, 255, 255, 0.8);  
+  background-color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   /* padding: 1%; */
-}  
+}
+
 div.bio a:hover {
   border-bottom: 3px solid;
-  background-color:#ffffff7e;
+  background-color: #ffffff7e;
   color: rgba(0, 0, 0, 0.9);
 }
+
 div.bio a:active {
   background: #1abc9c6c;
 }
+
 /* Apartado que engloba todo para compartir propiedades 
 .wrapper { 
   width:100%;
@@ -251,35 +320,72 @@ div.bio a:active {
 }*/
 
 /* Crear filas para organizar el espacio */
-.row { /*El row es para saltr filas*/
-	clear: both;
-  height: 100%; /*esto no hace nada*/
+.row {
+  /*El row es para saltr filas*/
+  clear: both;
+  height: 100%;
+  /*esto no hace nada*/
 }
 
 /* Organizo el espacio en columnas y le proporciono las columnas necesarias a cada apartado según su tamaño */
 .col {
-	float:left;
-	margin-left: 0.7%;
-	width: 90%;
+  float: left;
+  margin-left: 0.7%;
+  width: 90%;
   height: 100%;
   display: table;
-}/**/
+}
 
-.col-2 { width: 14.5833333333%;}
-.col-3 { width: 23.9166666667%;}
-.col-4 { width: 31.25%;}
-.col-5 { width: 39.5833333332%;}
-.col-6 { width: 47.9166666665%;}
-.col-7 { width: 56.25%;}
-.col-8 { width: 64.5833333331%;}
-.col-9 { width: 72.9166666664%;}
-.col-10 { width: 81.25%;}
-.col-11 { width: 89.5833333%;}
-.col-12 { width: 99.91666663%;}
+/**/
+
+.col-2 {
+  width: 14.5833333333%;
+}
+
+.col-3 {
+  width: 23.9166666667%;
+}
+
+.col-4 {
+  width: 31.25%;
+}
+
+.col-5 {
+  width: 39.5833333332%;
+}
+
+.col-6 {
+  width: 47.9166666665%;
+}
+
+.col-7 {
+  width: 56.25%;
+}
+
+.col-8 {
+  width: 64.5833333331%;
+}
+
+.col-9 {
+  width: 72.9166666664%;
+}
+
+.col-10 {
+  width: 81.25%;
+}
+
+.col-11 {
+  width: 89.5833333%;
+}
+
+.col-12 {
+  width: 99.91666663%;
+}
 
 /* División para pantalla 992px */
-@media screen and (max-width: 992px){
-/*Aqui tambiamos la barra de navegación a horizontal*/
+@media screen and (max-width: 992px) {
+
+  /*Aqui tambiamos la barra de navegación a horizontal*/
   .sidebar {
     width: 100%;
     height: 170px;
@@ -289,13 +395,13 @@ div.bio a:active {
   }
 
   .sidebar ul {
-    justify-content: center;    
+    justify-content: center;
     width: 100%;
     padding-right: 40px;
   }
 
   .sidebar ul li {
-    display: inline-block;  
+    display: inline-block;
   }
 
   .sidebar ul li a {
@@ -308,13 +414,14 @@ div.bio a:active {
     margin-right: 0;
     padding: 0px 0px;
     background-color: white;
-    }
+  }
 
   .trabajos {
     margin-left: 0 !important;
   }
+
   div.trabajo {
-    min-height:400px;
+    min-height: 400px;
   }
 
   .col-l {
@@ -324,82 +431,191 @@ div.bio a:active {
   }
 
   .wrapper {
-    width:80%;
+    width: 80%;
     max-width: 1200px;
     margin: 0 auto;
     padding-right: 2.08333333%;
   }
 
-  .col-2 { width: 14.5833333333%;}
-  .col-3 { width: 49.3%;} /*Esto era 22.9166666667*/
-  .col-4 { width: 32%;}/*31.25*/
-  .col-5 { width: 39.5833333332%;}
-  .col-6 { width: 47.9166666665%;}
-  .col-7 { width: 56.25%;}
-  .col-8 { width: 64.5833333331%;}
-  .col-9 { width: 72.9166666664%;}
-  .col-10 { width: 81.25%;}
-  .col-11 { width: 89.5833333%;}
-  .col-12 { width: 97.91666663%;} /*Esto era 99....*/
-      
+  .col-2 {
+    width: 14.5833333333%;
   }
+
+  .col-3 {
+    width: 49.3%;
+  }
+
+  /*Esto era 22.9166666667*/
+  .col-4 {
+    width: 32%;
+  }
+
+  /*31.25*/
+  .col-5 {
+    width: 39.5833333332%;
+  }
+
+  .col-6 {
+    width: 47.9166666665%;
+  }
+
+  .col-7 {
+    width: 56.25%;
+  }
+
+  .col-8 {
+    width: 64.5833333331%;
+  }
+
+  .col-9 {
+    width: 72.9166666664%;
+  }
+
+  .col-10 {
+    width: 81.25%;
+  }
+
+  .col-11 {
+    width: 89.5833333%;
+  }
+
+  .col-12 {
+    width: 97.91666663%;
+  }
+
+  /*Esto era 99....*/
+
+}
+
 /* División para pantalla 786px */
-@media screen and (max-width: 768px){
-.logo-container{
-  display: none;
-}
-.wrapper {
-	width:100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding-right: 2.08333333%;
+@media screen and (max-width: 768px) {
+  .logo-container {
+    display: none;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-right: 2.08333333%;
+  }
+
+  .col-m {
+    float: left;
+    margin-left: 2.08333333%;
+    width: 6.25%;
+  }
+
+  .col-2 {
+    width: 14.5833333333%;
+  }
+
+  .col-3 {
+    width: 97.3%;
+  }
+
+  /*esto era 22.9166666667*/
+  /*Aqui creo que la he fastidiado poniendo un 90 y pico*/
+  .col-4 {
+    width: 99%;
+  }
+
+  /*31.25*/
+  .col-5 {
+    width: 39.5833333332%;
+  }
+
+  .col-6 {
+    width: 47.9166666665%;
+  }
+
+  .col-7 {
+    width: 56.25%;
+  }
+
+  .col-8 {
+    width: 64.5833333331%;
+  }
+
+  .col-9 {
+    width: 72.9166666664%;
+  }
+
+  .col-10 {
+    width: 81.25%;
+  }
+
+  .col-11 {
+    width: 89.5833333%;
+  }
+
+  .col-12 {
+    width: 97.91666663%;
+  }
+
+  /*Esto era 99....*/
 }
 
-.col-m {
-	float: left;
-	margin-left: 2.08333333%;
-	width: 6.25%;	 
-}
-    
-.col-2 { width: 14.5833333333%;}
-.col-3 { width: 97.3%;} /*esto era 22.9166666667*/ /*Aqui creo que la he fastidiado poniendo un 90 y pico*/
-.col-4 { width: 99%;}/*31.25*/
-.col-5 { width: 39.5833333332%;}
-.col-6 { width: 47.9166666665%;}
-.col-7 { width: 56.25%;}
-.col-8 { width: 64.5833333331%;}
-.col-9 { width: 72.9166666664%;}
-.col-10 { width: 81.25%;}
-.col-11 { width: 89.5833333%;}
-.col-12 { width: 97.91666663%;} /*Esto era 99....*/
-}
 /* División para pantalla 576px */
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
 
-.wrapper {
-	width:100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding-right: 2.08333333%;
-} 
+  .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-right: 2.08333333%;
+  }
 
-.col-s {
-	float: left;
-	margin-left: 2.08333333%;
-	width: 6.25%;
-}
+  .col-s {
+    float: left;
+    margin-left: 2.08333333%;
+    width: 6.25%;
+  }
 
-.col-2-s { width: 14.5833333333%;}
-.col-3-s { width: 22.9166666667%;}
-.col-4-s { width: 31.25%;}/*31.25*/
-.col-5-s { width: 39.5833333332%;}
-.col-6-s { width: 47.9166666665%;}
-.col-7-s { width: 56.25%;}
-.col-8-s { width: 64.5833333331%;}
-.col-9-s { width: 72.9166666664%;}
-.col-10-s { width: 81.25%;}
-.col-11-s { width: 89.5833333%;}
-.col-12-s { width: 97.91666663%;}
+  .col-2-s {
+    width: 14.5833333333%;
+  }
+
+  .col-3-s {
+    width: 22.9166666667%;
+  }
+
+  .col-4-s {
+    width: 31.25%;
+  }
+
+  /*31.25*/
+  .col-5-s {
+    width: 39.5833333332%;
+  }
+
+  .col-6-s {
+    width: 47.9166666665%;
+  }
+
+  .col-7-s {
+    width: 56.25%;
+  }
+
+  .col-8-s {
+    width: 64.5833333331%;
+  }
+
+  .col-9-s {
+    width: 72.9166666664%;
+  }
+
+  .col-10-s {
+    width: 81.25%;
+  }
+
+  .col-11-s {
+    width: 89.5833333%;
+  }
+
+  .col-12-s {
+    width: 97.91666663%;
+  }
 }
 
 /* Navegador */
@@ -424,7 +640,7 @@ div.bio a:active {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -437,35 +653,63 @@ div.bio a:active {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
 
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical
+    /* Allow the user to vertically resize the textarea (not horizontally) */
 }
-input[type=email], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+
+input[type=email],
+select,
+textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical
+    /* Allow the user to vertically resize the textarea (not horizontally) */
 }
+
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
   background-color: #4caf99;
@@ -478,7 +722,7 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color:#4CAF50;
+  background-color: #4CAF50;
 }
 
 /* Add a background color and some padding around the form */
@@ -487,6 +731,6 @@ input[type=submit]:hover {
   background-color: #383838;
   padding: 20px;
   width: 50%;
-  display:inline-block;
+  display: inline-block;
 
 }

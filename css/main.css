@@ -11,7 +11,8 @@ body {
   /*color texto*/
   font-size: large;
   /*no me comvence, cambiar a medium*/
-  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/ /*esta me gusta*/
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+  /*esta me gusta*/
   font-family: 'IBM Plex Mono', monospace;
 
 }
@@ -44,6 +45,9 @@ model-viewer#reveal {
   border-radius: 5px;
   margin-top: 3px;
 }
+a.redondo{
+  color: #8a8324;
+}
 
 #myBtn {
   border-radius: 5px;
@@ -66,8 +70,6 @@ model-viewer#reveal {
   width: 50%;
   min-height: 10px;
   min-height: 60vh;
-  /*max-height:60vh;*/
-
 }
 
 .imgRecortBio {
@@ -103,10 +105,14 @@ model-viewer#reveal {
   position: fixed;
   height: 100%;
 
-  border-top-left-radius: 8px;   /* Esquina superior izquierda */
-  border-top-right-radius: 8px;  /* Esquina superior derecha */
-  border-bottom-right-radius: 8px; /* Esquina inferior derecha */
-  border-bottom-left-radius: 8px;  /* Esquina inferior izquierda */
+  border-top-left-radius: 8px;
+  /* Esquina superior izquierda */
+  border-top-right-radius: 8px;
+  /* Esquina superior derecha */
+  border-bottom-right-radius: 8px;
+  /* Esquina inferior derecha */
+  border-bottom-left-radius: 8px;
+  /* Esquina inferior izquierda */
 }
 
 /*el enlace de la barra lateral y los desplegables*/
@@ -135,7 +141,9 @@ h1 {
   font-size: larger;
   /*font-family: 'Montserrat', sans-serif;*/
   /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+  font-family: 'IBM Plex Mono', monospace;
+
   color: #8a8324;
   text-align: center;
   margin-top: 20px;
@@ -165,22 +173,17 @@ div.header {
 /* El logo ahora no es una imagen si no letras */
 .logo-container {
   display: inline-block;
-  /*padding: 10px 10px;*/
   margin-top: 20px;
   margin-left: 30px;
   margin-right: 30px;
+  margin-bottom: -30px;
   text-align: center;
-
-
-  font-family: 'Arial', sans-serif;
-  font-size: 24px;
-  font-weight: bold;
   display: block;
-  padding: 16px;
 }
 
 .logo-container>img {
-  width: 40px;
+  width: 100px;
+  border-radius: 50%;
 }
 
 /* Enlaces y lista */
@@ -273,7 +276,7 @@ div.trabajoArt>p {
 
 /* Enlaces del apartado de trabajos */
 div.trabajos a:link {
-  color: #000000 !important;
+  color: #8a8324 !important;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
@@ -287,7 +290,7 @@ div.trabajos a:hover {
 }
 
 div.trabajos a:active {
-  background: #1abc9c6c;
+  background: #aeac91;
 }
 
 /* Centrar texto en contacto y bio */
@@ -296,7 +299,7 @@ div.contact {
 }
 
 div.bio a:link {
-  color: #000000 !important;
+  color: #8a8324 !important;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
@@ -306,18 +309,22 @@ div.bio a:link {
 div.bio a:hover {
   border-bottom: 3px solid;
   background-color: #ffffff7e;
-  color: rgba(0, 0, 0, 0.9);
+  color: #8a8324(0, 0, 0, 0.9);
 }
 
 div.bio a:active {
   background: #1abc9c6c;
 }
 
-/* Apartado que engloba todo para compartir propiedades 
-.wrapper { 
-  width:100%;
-	margin: 0 auto;
-}*/
+.pdf {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 700px;
+  object-fit: cover;
+  display: block;
+  min-height: 50px;
+}
 
 /* Crear filas para organizar el espacio */
 .row {
@@ -410,6 +417,10 @@ div.bio a:active {
     font-weight: bold;
   }
 
+  .logo-container img {
+    display: none;
+  }
+
   div.header {
     margin-right: 0;
     padding: 0px 0px;
@@ -489,7 +500,9 @@ div.bio a:active {
 
 /* División para pantalla 786px */
 @media screen and (max-width: 768px) {
-  .logo-container {
+
+  /*Ocultar imagen de perfil*/
+  .logo-container img {
     display: none;
   }
 

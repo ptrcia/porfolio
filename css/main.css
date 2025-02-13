@@ -223,7 +223,7 @@ div.trabajos {
 }
 
 div.trabajos img {
-  width: 80%;
+  width: 90%;
   text-align: center;
 
   border-top-left-radius: 8px;
@@ -244,15 +244,12 @@ div.trabajo {
   min-height:700px; */
   min-height: 700px;
   min-height: 93vh;
+ 
 
   border-top-left-radius: 8px;
-  /* Esquina superior izquierda */
   border-top-right-radius: 8px;
-  /* Esquina superior derecha */
   border-bottom-right-radius: 8px;
-  /* Esquina inferior derecha */
   border-bottom-left-radius: 8px;
-  /* Esquina inferior izquierda */
 
 }
 

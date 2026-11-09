@@ -28,7 +28,7 @@
             '<input type="text" class="menu-search-item klynt-secondary-color klynt-secondary-bg-color-10 menu-search-item-active" name="search" placeholder="{{placeHolderWording}}"></input>' + svg;
 
         this._template_results = '<div class="search-result" data-id="{{id}}">' +
-            '<img class="search-result-thumbnail" src="{{^thumbnail}}Player/css/player/img/thumbnail.jpg{{/thumbnail}}{{#thumbnail}}{{thumbnail}}{{/thumbnail}}"></img>' +
+            '<img loading="lazy" class="search-result-thumbnail" src="{{^thumbnail}}Player/css/player/img/thumbnail.jpg{{/thumbnail}}{{#thumbnail}}{{thumbnail}}{{/thumbnail}}"></img>' +
             '<div class="search-result-text klynt-secondary-color">' +
             '<div><h2 class="search-result-name klynt-secondary-color">{{title}}</h2><span class="search-result-duration klynt-tertiary-color">{{formattedDuration}}</span></div>' +
             '<p class="search-result-tags klynt-secondary-color">{{#changeTags}}{{tags}}{{/changeTags}}</p>' +

@@ -8,7 +8,7 @@
     klynt.Mindmap = function (data) {
         this._data = data;
 
-        var watermark = this._data.displayWatermark ? '<img src="' + klynt.data.watermark.image + '" class="mindmap-watermark">' : '';
+        var watermark = this._data.displayWatermark ? '<img loading="lazy" src="' + klynt.data.watermark.image + '" class="mindmap-watermark">' : '';
         var arrowBottom =
             '<svg version="1.1" baseProfile="basic" class="mindmap-arrow mindmap-arrow-bottom"' +
             'xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"' +

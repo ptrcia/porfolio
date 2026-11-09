@@ -42,7 +42,7 @@
 
         this._template_partials = {
             'list-sequence': '<div class="index-sequence index-list-sequence klynt-secondary-color {{#current}} current klynt-tertiary-color-border-bis{{/current}} {{^current}} {{#viewed}} viewed{{/viewed}} {{/current}}">' +
-                '<a href="#{{alias}}" class="sequence-thumbnail sequence-link klynt-tertiary-color"><img src="{{^thumbnail}}Player/css/player/img/thumbnail.jpg{{/thumbnail}}{{#thumbnail}}{{thumbnail}}{{/thumbnail}}" alt="" /></a>' +
+                '<a href="#{{alias}}" class="sequence-thumbnail sequence-link klynt-tertiary-color"><img loading="lazy" src="{{^thumbnail}}Player/css/player/img/thumbnail.jpg{{/thumbnail}}{{#thumbnail}}{{thumbnail}}{{/thumbnail}}" alt="" /></a>' +
                 '<a href="#{{alias}}" class="sequence-title sequence-link klynt-secondary-color">{{title}}</a>' +
                 '{{#showDescriptions}}{{#description}}<div class="sequence-description">{{description}}</div>{{/description}}{{/showDescriptions}}' +
                 '{{#showDuration}}<div class="sequence-metadata klynt-tertiary-color">' +
@@ -63,7 +63,7 @@
 
         // this._template_partials = {
         //     'list-sequence': '<div class="index-sequence index-list-sequence klynt-secondary-color {{#current}} current klynt-tertiary-color-border-bis{{/current}} {{^current}} {{#viewed}} viewed{{/viewed}} {{/current}}">' +
-        //         '<a href="#{{alias}}" class="sequence-thumbnail sequence-link klynt-tertiary-color"><img src="{{^thumbnail}}Player/css/player/img/thumbnail.jpg{{/thumbnail}}{{#thumbnail}}{{thumbnail}}{{/thumbnail}}" alt="" /></a>' +
+        //         '<a href="#{{alias}}" class="sequence-thumbnail sequence-link klynt-tertiary-color"><img loading="lazy" src="{{^thumbnail}}Player/css/player/img/thumbnail.jpg{{/thumbnail}}{{#thumbnail}}{{thumbnail}}{{/thumbnail}}" alt="" /></a>' +
         //         '<a href="#{{alias}}" class="sequence-title sequence-link klynt-secondary-color">{{title}}</a>' +
         //         '{{#showDuration}}<div class="sequence-metadata klynt-tertiary-color">' +
         //         '<i class="icon icon-clock"></i>{{formattedDuration}}' +
@@ -84,7 +84,7 @@
 
         // this._template_partials = {
         //     'list-sequence': '<div class="index-sequence index-list-sequence klynt-secondary-color {{#current}} current klynt-tertiary-color-border-bis{{/current}} {{^current}} {{#viewed}} viewed{{/viewed}} {{/current}}">' +
-        //         '<a href="#{{alias}}" class="sequence-thumbnail sequence-link klynt-tertiary-color"><img src="{{^thumbnail}}Player/css/player/img/thumbnail.jpg{{/thumbnail}}{{#thumbnail}}{{thumbnail}}{{/thumbnail}}" alt="" /></a>' +
+        //         '<a href="#{{alias}}" class="sequence-thumbnail sequence-link klynt-tertiary-color"><img loading="lazy" src="{{^thumbnail}}Player/css/player/img/thumbnail.jpg{{/thumbnail}}{{#thumbnail}}{{thumbnail}}{{/thumbnail}}" alt="" /></a>' +
         //         '<a href="#{{alias}}" class="sequence-title sequence-link klynt-secondary-color">{{title}}' +
         //         '<span class="klynt-tertiary-color"><i class="icon icon-clock"></i>{{formattedDuration}}</span></a>' +
         //         '{{#showDescriptions}}{{#description}}<div class="sequence-description">{{description}}</div>{{/description}}{{/showDescriptions}}' +

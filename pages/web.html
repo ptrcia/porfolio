@@ -4,38 +4,30 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../css/main.css">
-        <script scr = "scipt.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link  rel="icon"   href="../images/PGAfavicon.png" type="image/png"/>
-
-        <title>
-            Patricia Gracia / Porfolio
-        </title>
+        <link rel="icon" href="../images/PGAfavicon.png" type="image/png"/>
+        <title>Patricia Gracia / Porfolio</title>
     </head>
 
     <body>
-        <!-- <div class="wrapper"> -->
         <div class="row">
             <div class="header"> 
                 <div class="sidebar"> 
-        <!-- una foto por pagina con alt  -->
-                    <a class="logo-container" href="../index.html" alt="Inicio"><img src="../images/ProfilePhoto.jpg"></a>
+                    <a class="logo-container" href="../index.html" alt="Inicio"><img loading="lazy" src="../images/ProfilePhoto.jpg"></a>
                     <h1>Patricia Gracia <br> Porfolio</h1>
-                    <ul><div class="dropdown">
-                        <li><a href="../index.html">Trabajos</a></li>
-                        <!--Subapartado-->
-                            <!--<li><button class="dropbtn">Trabajos</button></li>-->
+                    <ul>
+                        <div class="dropdown">
+                            <li><a href="../index.html">Trabajos</a></li>
                             <div class="dropdown-content">
                                 <a href="../pages/arte.html">Artes Gráficas</a>
                                 <a href="../pages/3D.html">Modelado 3D</a>
                                 <a href="../pages/entorno.html">Videojuegos</a>
                                 <a href="../pages/web.html">Web, Video y Transmedia</a>
                                 <a href="../pages/app.html">Aplicaciones</a>
-
                             </div>
-                    </div>
-                        <!--Subapartado-->
+                        </div>
                         <li><a href="../pages/contact.html">Contacto</a></li>
                         <li><a href="../pages/bio.html">Biografía</a></li>
                     </ul>
@@ -43,180 +35,172 @@
             </div> 
         </div>
 
-        <!-- <div class="row"> -->
-            <div class="col col-12">
-                <div class="trabajos">
-                    <div class="row">
-        <!--no usados-->
-                <div class="col col-4 col-12-l">
+        <div class="col col-12">
+            <div class="trabajos">
+                <div class="row">
 
-                <div class="trabajo">
-                    <p>
-                        <br>
+                    <!-- Construye tu propio discurso -->
+                    <div class="col col-4 col-12-l">
+                        <a href="videoBYOS.html" target="_blank" class="trabajo-link">
+                            <div class="trabajo">
+                                <p>
+                                    <br>
+                                    <strong>Título</strong><br>
+                                    Construye tu propio discurso<br>
+                                    <em>Build Your Own Speech</em>
+                                    <br><br>
+                                    <strong>Año</strong><br>2021<br>
+                                    <br>
+                                    <strong>Técnica</strong><br>TouchDesigner<br>
+                                    <br>
+                                    <strong>Descripción</strong><br>
+                                    Se ha desarrollado un programa que interactúa con el usuario a través de un mando Xbox One, y cuya respuesta del sistema es la variación en distintos apartados de una composición.<br>
+                                    <em>This software interacts with the user through Xbox One controller, and the response of the system is the variation in different sections of a composition.</em>
+                                </p>
+                                <br>
+                                <img loading="lazy" src="../images/videos/BYOS.jpg" alt="BuildYourOwnSpeech" class="imgRecort">
+                            </div>
+                        </a>
+                        <div class="botones-tarjeta">
+                            <a class="redondo" href="videoBYOS.html" target="_blank">Más información y recursos</a>
+                        </div>
+                    </div>
+                
+                    <!-- La Gran Riada de San Miguel -->
+                    <div class="col col-4 col-12-l">
+                        <a href="WEBGranRiadaSanMiguel/index.html" target="_blank" class="trabajo-link">
+                            <div class="trabajo">
+                                <p>
+                                    <br>
+                                    <strong>Título</strong><br>
+                                    La Gran Riada de San Miguel<br>
+                                    <em>The great flood of San Miguel</em>
+                                    <br><br>
+                                    <strong>Año</strong><br>2020<br>
+                                    <br>
+                                    <strong>Técnica</strong><br>HTML, CSS y Java<br>
+                                    <br>
+                                    <strong>Descripción</strong><br>
+                                    Esta pequeña web pretende recoger unas imágenes de lo que fue una de las mayores inundaciones documentadas de la ciudad de Cartagena.<br>
+                                    <em>This small website aims to collect some images of what was one of the largest documented floods in the city of Cartagena (Spain).</em>
+                                </p>
+                                <br>
+                                <img loading="lazy" src="../images/GranRiada.jpg" alt="La gran riada de San Miguel" class="imgRecort">
+                            </div>
+                        </a>
+                        <div class="botones-tarjeta">
+                            <a class="redondo" href="WEBGranRiadaSanMiguel/index.html" target="_blank">Ver el trabajo</a>
+                        </div>
+                    </div>
 
-                        <strong>Título</strong><br>
-                        Construye tu propio discurso<br>
-                        <em>Build Your Own Speech</em>
-                        <br>
-                        <br>
-                        <strong>Año</strong><br>
-                        2021<br>
-                        <br>
-                        <strong>Técnica</strong><br>
-                        TouchDesigner<br>
-                        <br>
-                        <strong>Descripción</strong><br>
-                        Se ha desarrollado un programa que interactúa con el usuario a través de un mando Xbox One, y cuya respuesta del sistema es la variación en distintos apartados de una composición.<br>
-                        <br><em>This software interacts with the user through Xbox One controller, and the response of the system is the variation in different sections of a composition.
-                        </em>
-                        <br>
-                        <br>
-                        <a class="redondo" href="videoBYOS.html" target="_blank">Más información y recursos</a>
+                    <!-- Los Motivos de Héctor -->
+                    <div class="col col-4 col-12-l">
+                        <a href="https://losmotivosdehector.wixsite.com/website" target="_blank" class="trabajo-link">
+                            <div class="trabajo">
+                                <p>
+                                    <br>
+                                    <strong>Título</strong><br>
+                                    Los Motivos de Héctor
+                                    <br><br>
+                                    <strong>Año</strong><br>2019<br>
+                                    <br>
+                                    <strong>Técnica</strong><br>Transmedia. Ivoox, blogspot, website y espacio sonoro.<br>
+                                    <em>Transmedia. Ivoox, blogspot, website and sound space.</em>
+                                    <br>
+                                    <strong>Descripción</strong><br>
+                                    Proyecto colectivo de ficción transmedia en dónde la trama expone un tejido en el que confluyen pasiones, frustraciones y traición.<br>
+                                    <em>A collective project of transmedia fiction where the plot exposes a web where passions, frustrations and betrayal converge.</em>
+                                </p>
+                                <br>
+                                <img loading="lazy" src="../images/hrctor.jpg" alt="Los motivos de Héctor" class="imgRecort">
+                            </div>
+                        </a>
+                        <div class="botones-tarjeta">
+                            <a class="redondo" href="https://losmotivosdehector.wixsite.com/website" target="_blank">Ver el trabajo</a>
+                        </div>
+                    </div>
 
-                    </p>
-                    <br>
-                    <img src="../images/videos/BYOS.jpg" alt="BuildYourOwnSpeech" class="imgRecort">
+                    <!-- Medieval Times -->
+                    <div class="col col-4 col-12-l">
+                        <a href="https://www.um.es/pam/2019/medieval/#Pr%C3%B3logo" target="_blank" class="trabajo-link">
+                            <div class="trabajo">
+                                <p>
+                                    <br>
+                                    <strong>Título</strong><br>
+                                    Medieval Times
+                                    <br><br>
+                                    <strong>Año</strong><br>2019<br>
+                                    <br>
+                                    <strong>Técnica</strong><br>Klynt3<br>
+                                    <br>
+                                    <strong>Descripción</strong><br>
+                                    Entorno web con caracter narrativo no lineal de temática medieval. Se pretende evidenciar de manera entretenida la desigualdad oportunidades entre clases sociales.<br>
+                                    <em>Web environment with a non-linear narrative character with a medieval theme. This environment aims to show in an entertaining way the inequality of opportunities between social classes.</em>
+                                </p>
+                                <br>
+                                <img loading="lazy" src="../images/personajes.jpg" alt="Medieval Times" class="imgRecort">
+                            </div>
+                        </a>
+                        <div class="botones-tarjeta">
+                            <a class="redondo" href="https://www.um.es/pam/2019/medieval/#Pr%C3%B3logo" target="_blank">Ver el trabajo</a>
+                        </div>
+                    </div>
+
+                    <!-- Delimitantes -->
+                    <div class="col col-4 col-12-l">
+                        <a href="videoDelim.html" target="_blank" class="trabajo-link">
+                            <div class="trabajo">
+                                <p>
+                                    <br>
+                                    <strong>Título</strong><br>
+                                    Delimitantes
+                                    <br><br>
+                                    <strong>Año</strong><br>2021<br>
+                                    <br>
+                                    <strong>Técnica</strong><br>Adobe Premiere Pro<br>
+                                    <br>
+                                    <strong>Descripción</strong><br>
+                                    Videoensayo experimental que trata de examinar las imagenes resultantes de las cámaras integradas del visor de realidad virtual en las Oculus Quest 2.<br>
+                                    <em>Experimental video essay that tries to examine the images resulting from the integrated cameras of the virtual reality viewer in the Oculus Quest 2.</em>
+                                </p>
+                                <br>
+                                <img loading="lazy" src="../images/videos/Delimitantes01.jpg" alt="Delimitantes" class="imgRecort">
+                            </div>
+                        </a>
+                        <div class="botones-tarjeta">
+                            <a class="redondo" href="videoDelim.html" target="_blank">Más información y recursos</a>
+                        </div>
+                    </div>
+
+                    <!-- La Lista -->
+                    <div class="col col-4 col-12-l">
+                        <a href="La_Lista/index.html" target="_blank" class="trabajo-link">
+                            <div class="trabajo">
+                                <p>
+                                    <br>
+                                    <strong>Título</strong><br>
+                                    La Lista
+                                    <br><br>
+                                    <strong>Año</strong><br>2020<br>
+                                    <br>
+                                    <strong>Técnica</strong><br>Klynt3<br>
+                                    <br>
+                                    <strong>Descripción</strong><br>
+                                    Proyecto artístico web basado en el documento "List of 36 570 documented deaths of refugees and migrants due to the restrictive policies of Fortress Europe".<br>
+                                    <em>Artistic web project based on the document "List of 36 570 documented deaths of refugees and migrants due to the restrictive policies of Fortress Europe".</em>
+                                </p>
+                                <br>
+                                <img loading="lazy" src="../images/LaLista01.jpg" alt="LaLista" class="imgRecort">
+                            </div>
+                        </a>
+                        <div class="botones-tarjeta">
+                            <a class="redondo" href="http://www.unitedagainstracism.org/wp-content/uploads/2019/07/ListofDeathsActual.pdf" target="_blank">Documento</a>
+                            <a class="redondo" href="La_Lista/index.html" target="_blank">Ver obra (no disponible online)</a>
+                        </div>
+                    </div>
+
                 </div>
-
-            </div>
-        
-            <div class="col col-4 col-12-l">
-                <div class="trabajo">
-                    <p>
-                        <br>
-                        <strong>Título</strong><br>
-                        La Gran Riada de San Miguel<br>
-                        <em>The great flood of San Miguel</em>
-                        <br>
-                        <br>
-                        <strong>Año</strong><br>
-                        2020<br>
-                        <br>
-                        <strong>Técnica</strong><br>
-                        HTML, CSS y Java<br>
-                        <br>
-                        <strong>Descripción</strong><br>
-                        Esta pequeña web pretende recoger unas imágenes de lo que fue una de las mayores inundaciones documentadas de la ciudad de Cartagena.<br>
-                        <br>
-                        <em>This small website aims to collect some images of what was one of the largest documented floods in the city of Cartagena (Spain).
-                        </em>
-                        <br>
-                        <br>
-                        <br>
-
-                        <a class="redondo" href="WEBGranRiadaSanMiguel/index.html" target="_blank">Ver el trabajo</a>
-                    </p>
-                    <br>
-                    <img src="../images/GranRiada.jpg" alt="La gran riada de San Miguel"class="imgRecort">
-                </div>
-            </div>
-
-        <div class="col col-4 col-12-l">
-            <div class="trabajo">
-                    <p>
-                        <br>
-                        <strong>Título</strong><br>
-                        Los Motivos de Héctor<br>
-                        <br>
-                        <strong>Año</strong><br>
-                        2019<br>
-                        <br>
-                        <strong>Técnica</strong><br>
-                        Transmedia. Ivoox, blogspot, website y espacio sonoro.<br>
-                        <em>Transmedia. Ivoox, blogspot, website and sound space.</em>
-                        <br>
-                        <br>
-                        <strong>Descripción</strong><br>
-                        Proyecto colectivo de ficción transmedia en dónde la trama expone un tejido en el que confluyenpasiones, frustraciones y traición.<br>
-                        <br><em>A collective project of transmedia fiction where the plot exposes a web where passions, frustrations and betrayal converge.
-                        </em>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-
-                        <a class="redondo" href="https://losmotivosdehector.wixsite.com/website"target="_blank">Ver el trabajo</a>
-                    </p>
-                    <br>
-                    <img src="../images/hrctor.jpg" alt="Los motivos de Héctor"class="imgRecort">
-            </div>
-        </div>
-
-        <div class="col col-4 col-12-l">
-            <div class="trabajo">
-                    <p>
-                        <br>
-                        <strong>Título</strong><br>
-                        Medieval Times<br>
-                        <br>
-                        <strong>Año</strong><br>
-                        2019<br>
-                        <br>
-                        <strong>Técnica</strong><br>
-                        Klynt3<br>
-                        <br>
-                        <strong>Descripción</strong><br>
-                        Entorno web con caracter narrativo no lineal de temática medieval. Se pretende evidenciar de manera entretenida la desigualdad oportunidades entre clases sociales.<br>
-                        <br><em>Web environment with a non-linear narrative character with a medieval theme. This environment aims to show in an entertaining way the inequality of opportunities between social classes.
-                        </em>
-                        <br>
-                        <br>
-                        <a class="redondo" href="https://www.um.es/pam/2019/medieval/#Pr%C3%B3logo"target="_blank">Ver el trabajo</a>
-                    </p>
-                    <br>
-                    <img src="../images/personajes.jpg" alt="Medieval Times"class="imgRecort">
-            </div>
-        </div>
-        <div class="col col-4 col-12-l">
-            <div class="trabajo">
-                    <p>
-                        <br>
-                        <strong>Título</strong><br>
-                        Delimitantes<br>
-                        <br>
-                        <strong>Año</strong><br>
-                        2021<br>
-                        <br>
-                        <strong>Técnica</strong><br>
-                        Adobe Premiere Pro<br>
-                        <br>
-                        <strong>Descripción</strong><br>
-                        Videoensayo exerimental que trata de examinar las imagenes resultantes de las cámaras integradas del visor de realidad virtual en las Oculus Quest 2.<br>
-                        <br><em>Experimental video essay that tries to examine the images resulting from the integrated cameras of the virtual reality viewer in the Oculus Quest 2.
-                        </em>
-                        <br>
-                        <br>
-                        <a class="redondo" href="videoDelim.html" target="_blank">Más información y recursos</a>
-                    </p>
-                    <br>
-                    <img src="../images/videos/Delimitantes01.jpg" alt="Delimitantes"class="imgRecort">
-            </div>
-        </div>
-        <div class="col col-4 col-12-l">
-            <div class="trabajo">
-                    <p>
-                        <br>
-                        <strong>Título</strong><br>
-                        La Lista<br>
-                        <br>
-                        <strong>Año</strong><br>
-                        2020<br>
-                        <br>
-                        <strong>Técnica</strong><br>
-                        Klynt3<br>
-                        <br>
-                        <strong>Descripción</strong><br>
-                        Proyecto artístico web basado en el documento "List of 36 570 documented deaths of refugees and migrants due to the restrictive policies of "Fortress Europe""<br>
-                        <br><em>Artistic web proyect based on the document "List of 36 570 documented deaths of refugees and migrants due to the restrictive policies of "Fortress Europe""<br>
-                        <br><a href="http://www.unitedagainstracism.org/wp-content/uploads/2019/07/ListofDeathsActual.pdf" target="_blank">Documento</a>
-                        </em>
-
-                        <a class="redondo" href="La_Lista/index.html" target="_blank">Ver obra(no disponible online)</a>
-                    </p>
-                    <br>
-                    <img src="../images/LaLista01.jpg" alt="LaLista"class="imgRecort">
             </div>
         </div>
     </body>
-
 </html>

@@ -77,7 +77,7 @@
         resetDimensions();
 
         if (watermark && watermark.enabled) {
-            $element.append('<img src="Player/css/editor/img/watermark.png" class="watermark watermark-' + watermark.position + '"></img>');
+            $element.append('<img loading="lazy" src="Player/css/editor/img/watermark.png" class="watermark watermark-' + watermark.position + '"></img>');
             $element.hammer().on('click', '.watermark', actionWatermark);
         }
     }

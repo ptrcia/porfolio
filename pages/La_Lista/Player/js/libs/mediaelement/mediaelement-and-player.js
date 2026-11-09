@@ -1193,7 +1193,7 @@ mejs.HtmlMediaElementShim = {
       errorContainer.innerHTML = options.customError;
     } else {
       errorContainer.innerHTML = (poster !== '') ?
-        '<a href="' + playback.url + '"><img src="' + poster + '" width="100%" height="100%" /></a>' :
+        '<a href="' + playback.url + '"><img loading="lazy" src="' + poster + '" width="100%" height="100%" /></a>' :
         '<a href="' + playback.url + '"><span>' + mejs.i18n.t('Download File') + '</span></a>';
     }
 
@@ -2987,7 +2987,7 @@ if (typeof jQuery != 'undefined') {
 				posterImg = posterDiv.find('img');
 
 			if (posterImg.length === 0) {
-				posterImg = $('<img width="100%" height="100%" />').appendTo(posterDiv);
+				posterImg = $('<img loading="lazy" width="100%" height="100%" />').appendTo(posterDiv);
 			}
 
 			posterImg.attr('src', url);
@@ -5035,7 +5035,7 @@ if (typeof jQuery != 'undefined') {
 
 			if (typeof img == 'undefined' || typeof img.fadeIn == 'undefined') {
 
-				t.slides.entries.imgs[index] = img = $('<img src="' + url + '">')
+				t.slides.entries.imgs[index] = img = $('<img loading="lazy" src="' + url + '">')
 						.on('load', function() {
 							img.appendTo(t.slidesContainer)
 								.hide()

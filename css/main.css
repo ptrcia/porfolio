@@ -1,20 +1,15 @@
-/* GENERAL */
+/* ==========================================================
+   1. GENERAL Y CONFIGURACIÓN BASE
+   ========================================================== */
 * {
   box-sizing: border-box;
 }
 
 body {
-  /* background-color: rgb(50, 50, 0); */
-  /*background-color: #594F42;*/
   background-color: #663E3E;
   color: snow;
-  /*color texto*/
   font-size: large;
-  /*no me comvence, cambiar a medium*/
-  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
-  /*esta me gusta*/
   font-family: 'IBM Plex Mono', monospace;
-
 }
 
 p {
@@ -31,7 +26,6 @@ model-viewer {
   width: 90%;
   object-fit: cover;
   display: block;
-  min-height: 10px;
   min-height: 90vh;
 }
 
@@ -39,14 +33,139 @@ model-viewer#reveal {
   --poster-color: transparent;
 }
 
+/* ==========================================================
+   2. ENLACES Y BOTONES REDONDOS
+   ========================================================== */
 .redondo {
   padding-left: 4px;
   padding-right: 4px;
   border-radius: 5px;
   margin-top: 3px;
 }
-a.redondo{
-  color: #8a8324;
+
+a.redondo {
+  color: #d4cb6a;
+}
+
+/* Contenedor elegante ("box") para los botones secundarios fuera de la tarjeta */
+.botones-tarjeta {
+    margin-top: 12px;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+/* ==========================================================
+   3. TARJETAS CLICABLES Y ANIMACIONES (FLEXBOX PARA IGUALAR ALTURAS)
+   ========================================================== */
+
+/* Las filas de trabajos usan Flexbox para estirar todas las tarjetas por igual */
+.trabajos .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+/* Las columnas se comportan como contenedores flexibles */
+.trabajos .col {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    float: none; /* Reemplaza el float antiguo para trabajar limpio con Flexbox */
+}
+
+/* Forzar que el enlace y la tarjeta ocupen el 100% de la altura de la columna */
+.trabajos .col > a.trabajo-link,
+.trabajos .col > .trabajo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+a.trabajo-link .trabajo {
+    height: 100%;
+}
+
+
+/* Estilo del enlace contenedor de la tarjeta */
+a.trabajo-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    background-color: transparent !important;
+}
+
+/* Efecto hover en toda la tarjeta (eleva y cambia el fondo) */
+a.trabajo-link:hover .trabajo,
+a.trabajo-link:hover .trabajoArt {
+    background-color: rgba(177, 177, 177, 0.3);
+    transform: translateY(-4px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto zoom y brillo en la imagen al pasar el ratón por la tarjeta */
+a.trabajo-link:hover img.imgRecort,
+a.trabajo-link:hover img.imgRecortDig {
+    transform: scale(1.04);
+    filter: brightness(1.08);
+}
+
+/* Transición base suave para las imágenes */
+.trabajo img.imgRecort,
+.trabajoArt img.imgRecortDig {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* ==========================================================
+   4. IMÁGENES Y BLOQUES DE TRABAJOS
+   ========================================================== */
+.imgRecort,
+.imgRecortBio,
+.imgRecortDig {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.imgRecort { min-height: 60vh; }
+.imgRecortBio { min-height: 40vh; }
+.imgRecortDig { min-height: 60vh; }
+
+div.trabajos {
+  margin-left: 200px;
+}
+
+div.trabajos img {
+  width: 90%;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+div.trabajo,
+div.trabajoArt {
+  background-color: rgba(177, 177, 177, 0.178);
+  border-radius: 8px;
+}
+
+div.trabajo>p {
+  min-height: 300px;
+}
+
+div.trabajoArt>p {
+  min-height: 150px;
 }
 
 #myBtn {
@@ -60,43 +179,9 @@ a.redondo{
   display: none;
 }
 
-.imgRecort {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  min-height: 10px;
-  min-height: 60vh;
-}
-
-.imgRecortBio {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  min-height: 50px;
-  min-height: 40vh;
-}
-
-.imgRecortDig {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  min-height: 60px;
-  min-height: 60vh;
-}
-
-/* Sidebar en el Header para la navegación vertical */
+/* ==========================================================
+   5. NAVEGACIÓN Y SIDEBAR
+   ========================================================== */
 .sidebar {
   margin: 0;
   padding: 0;
@@ -104,18 +189,9 @@ a.redondo{
   background-color: #e2e2e2;
   position: fixed;
   height: 100%;
-
-  border-top-left-radius: 8px;
-  /* Esquina superior izquierda */
-  border-top-right-radius: 8px;
-  /* Esquina superior derecha */
-  border-bottom-right-radius: 8px;
-  /* Esquina inferior derecha */
-  border-bottom-left-radius: 8px;
-  /* Esquina inferior izquierda */
+  border-radius: 8px;
 }
 
-/*el enlace de la barra lateral y los desplegables*/
 .sidebar a {
   display: block;
   color: rgb(0, 0, 0);
@@ -123,34 +199,21 @@ a.redondo{
   text-decoration: none;
 }
 
-/*creo que esto no funciona*/
-/*.sidebar a.active {
-  background-color: #4CAF50;
-  color: white;
-}*/
-
 .sidebar a:hover:not(.active) {
   background-color: #555;
   color: white;
 }
 
-/* Cosas del body: menú */
-/*Patricia Gracia Artero Porfolio*/
 h1 {
   font-weight: bold;
   font-size: larger;
-  /*font-family: 'Montserrat', sans-serif;*/
-  /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
-  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
   font-family: 'IBM Plex Mono', monospace;
-
   color: #8a8324;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-/* Los puntos del nav */
 ::marker {
   color: #beb862;
 }
@@ -158,27 +221,13 @@ h1 {
 div.header {
   margin-right: 180px;
   padding: 1px 5px;
-
-  border-top-left-radius: 50px;
-  /* Esquina superior izquierda */
-  border-top-right-radius: 50px;
-  /* Esquina superior derecha */
-  border-bottom-right-radius: 50px;
-  /* Esquina inferior derecha */
-  border-bottom-left-radius: 50px;
-  /* Esquina inferior izquierda */
-
+  border-radius: 50px;
 }
 
-/* El logo ahora no es una imagen si no letras */
 .logo-container {
-  display: inline-block;
-  margin-top: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-bottom: -30px;
-  text-align: center;
   display: block;
+  margin: 20px 30px -30px 30px;
+  text-align: center;
 }
 
 .logo-container>img {
@@ -186,111 +235,31 @@ div.header {
   border-radius: 50%;
 }
 
-/* Enlaces y lista */
 .header>ul {
   list-style-type: none;
-  padding: 0px, 0px, 0px, 0px;
+  padding: 0;
 }
 
 .header>ul>li {
-  /* display: inline-block; */
   color: white;
   text-align: center;
   text-decoration: none;
 }
 
-.header>ul>li a:link {
-  color: #b6b6b6;
-}
-
-.header>ul>li a:visited {
-  color: #f3f3f3;
-}
-
+.header>ul>li a:link { color: #b6b6b6; }
+.header>ul>li a:visited { color: #f3f3f3; }
 .header>ul>li a:hover {
   border-bottom: 3px solid;
   background-color: #a8a8a821;
 }
-
 .header>ul>li a:active {
   background: #ffffff46;
   color: #ffffff;
 }
 
-/* Ajustes de los bloques de trabajos */
-div.trabajos {
-  margin-left: 200px;
-}
-
-div.trabajos img {
-  width: 90%;
-  text-align: center;
-
-  border-top-left-radius: 8px;
-  /* Esquina superior izquierda */
-  border-top-right-radius: 8px;
-  /* Esquina superior derecha */
-  border-bottom-right-radius: 8px;
-  /* Esquina inferior derecha */
-  border-bottom-left-radius: 8px;
-  /* Esquina inferior izquierda */
-
-}
-
-div.trabajo {
-  /*text-align:center;*/
-  background-color: rgba(177, 177, 177, 0.178);
-  /* Técnica básica:
-  min-height:700px; */
-  min-height: 700px;
-  min-height: 93vh;
- 
-
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-
-}
-
-div.trabajoArt {
-  /*text-align:center;*/
-  background-color: rgba(177, 177, 177, 0.178);
-  /* Técnica básica:
-  min-height:700px; */
-  min-height: 700px;
-  min-height: 93vh;
-}
-
-div.trabajo>p {
-  min-height: 300px;
-}
-
-div.trabajoArt>p {
-  min-height: 150px;
-}
-
-
-/* Enlaces del apartado de trabajos */
-div.trabajos a:link {
-  color: #8a8324 !important;
-  font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  /* padding: 1%; */
-}
-
-div.trabajos a:hover {
-  border-bottom: 3px solid;
-  background-color: #ffffff7e;
-  color: rgba(0, 0, 0, 0.9);
-}
-
-div.trabajos a:active {
-  background: #aeac91;
-}
-
-/* Centrar texto en contacto y bio */
+/* ==========================================================
+   6. SECCIONES ESPECÍFICAS (Contacto, Bio, PDFs)
+   ========================================================== */
 div.contact {
   text-align: center;
 }
@@ -300,13 +269,12 @@ div.bio a:link {
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  /* padding: 1%; */
 }
 
 div.bio a:hover {
   border-bottom: 3px solid;
   background-color: #ffffff7e;
-  color: #8a8324(0, 0, 0, 0.9);
+  color: #8a8324;
 }
 
 div.bio a:active {
@@ -323,328 +291,56 @@ div.bio a:active {
   min-height: 50px;
 }
 
-/* Crear filas para organizar el espacio */
-.row {
-  /*El row es para saltr filas*/
-  clear: both;
-  height: 100%;
-  /*esto no hace nada*/
+.sidebar-role {
+    font-size: 0.8rem;
+    color: #8a8324;
+    text-align: center;
+    margin-top: -12px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
-/* Organizo el espacio en columnas y le proporciono las columnas necesarias a cada apartado según su tamaño */
+/* ==========================================================
+   7. SISTEMA DE COLUMNAS (GRID/ANCHO)
+   ========================================================== */
+.row {
+  clear: both;
+  height: 100%;
+}
+
 .col {
-  float: left;
   margin-left: 0.7%;
   width: 90%;
   height: 100%;
-  display: table;
 }
 
-/**/
-
-.col-2 {
-  width: 14.5833333333%;
-}
-
-.col-3 {
-  width: 23.9166666667%;
-}
-
-.col-4 {
-  width: 31.25%;
-}
-
-.col-5 {
-  width: 39.5833333332%;
-}
-
-.col-6 {
-  width: 47.9166666665%;
-}
-
-.col-7 {
-  width: 56.25%;
-}
-
-.col-8 {
-  width: 64.5833333331%;
-}
-
-.col-9 {
-  width: 72.9166666664%;
-}
-
-.col-10 {
-  width: 81.25%;
-}
-
-.col-11 {
-  width: 89.5833333%;
-}
-
-.col-12 {
-  width: 99.91666663%;
-}
-
-/* División para pantalla 992px */
-@media screen and (max-width: 992px) {
-
-  /*Aqui tambiamos la barra de navegación a horizontal*/
-  .sidebar {
-    width: 100%;
-    height: 170px;
-    position: relative;
-    background-color: white !important;
-    text-align: center;
-  }
-
-  .sidebar ul {
-    justify-content: center;
-    width: 100%;
-    padding-right: 40px;
-  }
-
-  .sidebar ul li {
-    display: inline-block;
-  }
-
-  .sidebar ul li a {
-    display: block;
-    padding: 5px;
-    font-weight: bold;
-  }
-
-  .logo-container img {
-    display: none;
-  }
-
-  div.header {
-    margin-right: 0;
-    padding: 0px 0px;
-    background-color: white;
-  }
-
-  .trabajos {
-    margin-left: 0 !important;
-  }
-
-  div.trabajo {
-    min-height: 400px;
-  }
-
-  .col-l {
-    float: left;
-    margin-left: 2.08333333%;
-    width: 6.25%;
-  }
-
-  .wrapper {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-right: 2.08333333%;
-  }
-
-  .col-2 {
-    width: 14.5833333333%;
-  }
-
-  .col-3 {
-    width: 49.3%;
-  }
-
-  /*Esto era 22.9166666667*/
-  .col-4 {
-    width: 32%;
-  }
-
-  /*31.25*/
-  .col-5 {
-    width: 39.5833333332%;
-  }
-
-  .col-6 {
-    width: 47.9166666665%;
-  }
-
-  .col-7 {
-    width: 56.25%;
-  }
-
-  .col-8 {
-    width: 64.5833333331%;
-  }
-
-  .col-9 {
-    width: 72.9166666664%;
-  }
-
-  .col-10 {
-    width: 81.25%;
-  }
-
-  .col-11 {
-    width: 89.5833333%;
-  }
-
-  .col-12 {
-    width: 97.91666663%;
-  }
-
-  /*Esto era 99....*/
-
-}
-
-/* División para pantalla 786px */
-@media screen and (max-width: 768px) {
-
-  /*Ocultar imagen de perfil*/
-  .logo-container img {
-    display: none;
-  }
-
-  .wrapper {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-right: 2.08333333%;
-  }
-
-  .col-m {
-    float: left;
-    margin-left: 2.08333333%;
-    width: 6.25%;
-  }
-
-  .col-2 {
-    width: 14.5833333333%;
-  }
-
-  .col-3 {
-    width: 97.3%;
-  }
-
-  /*esto era 22.9166666667*/
-  /*Aqui creo que la he fastidiado poniendo un 90 y pico*/
-  .col-4 {
-    width: 99%;
-  }
-
-  /*31.25*/
-  .col-5 {
-    width: 39.5833333332%;
-  }
-
-  .col-6 {
-    width: 47.9166666665%;
-  }
-
-  .col-7 {
-    width: 56.25%;
-  }
-
-  .col-8 {
-    width: 64.5833333331%;
-  }
-
-  .col-9 {
-    width: 72.9166666664%;
-  }
-
-  .col-10 {
-    width: 81.25%;
-  }
-
-  .col-11 {
-    width: 89.5833333%;
-  }
-
-  .col-12 {
-    width: 97.91666663%;
-  }
-
-  /*Esto era 99....*/
-}
-
-/* División para pantalla 576px */
-@media screen and (max-width: 576px) {
-
-  .wrapper {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-right: 2.08333333%;
-  }
-
-  .col-s {
-    float: left;
-    margin-left: 2.08333333%;
-    width: 6.25%;
-  }
-
-  .col-2-s {
-    width: 14.5833333333%;
-  }
-
-  .col-3-s {
-    width: 22.9166666667%;
-  }
-
-  .col-4-s {
-    width: 31.25%;
-  }
-
-  /*31.25*/
-  .col-5-s {
-    width: 39.5833333332%;
-  }
-
-  .col-6-s {
-    width: 47.9166666665%;
-  }
-
-  .col-7-s {
-    width: 56.25%;
-  }
-
-  .col-8-s {
-    width: 64.5833333331%;
-  }
-
-  .col-9-s {
-    width: 72.9166666664%;
-  }
-
-  .col-10-s {
-    width: 81.25%;
-  }
-
-  .col-11-s {
-    width: 89.5833333%;
-  }
-
-  .col-12-s {
-    width: 97.91666663%;
-  }
-}
-
-/* Navegador */
-/* Dropdown Button */
+.col-2 { width: 14.5833333333%; }
+.col-3 { width: 23.9166666667%; }
+.col-4 { width: 31.25%; }
+.col-5 { width: 39.5833333332%; }
+.col-6 { width: 47.9166666665%; }
+.col-7 { width: 56.25%; }
+.col-8 { width: 64.5833333331%; }
+.col-9 { width: 72.9166666664%; }
+.col-10 { width: 81.25%; }
+.col-11 { width: 89.5833333%; }
+.col-12 { width: 99.91666663%; }
+
+/* ==========================================================
+   8. MENÚ DESPLEGABLE (DROPDOWN)
+   ========================================================== */
 .dropbtn {
-  /*background-color: #4CAF50;
-  color: black;*/
   padding: 16px;
   font-size: 16px;
   border: none;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -654,7 +350,6 @@ div.bio a:active {
   z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -662,65 +357,35 @@ div.bio a:active {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
 
-/* Style inputs with type="text", select elements and textareas */
+/* ==========================================================
+   9. FORMULARIOS Y POPUPS
+   ========================================================== */
 input[type=text],
-select,
-textarea {
-  width: 100%;
-  /* Full width */
-  padding: 12px;
-  /* Some padding */
-  border: 1px solid #ccc;
-  /* Gray border */
-  border-radius: 4px;
-  /* Rounded borders */
-  box-sizing: border-box;
-  /* Make sure that padding and width stays in place */
-  margin-top: 6px;
-  /* Add a top margin */
-  margin-bottom: 16px;
-  /* Bottom margin */
-  resize: vertical
-    /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
 input[type=email],
 select,
 textarea {
   width: 100%;
-  /* Full width */
   padding: 12px;
-  /* Some padding */
   border: 1px solid #ccc;
-  /* Gray border */
   border-radius: 4px;
-  /* Rounded borders */
   box-sizing: border-box;
-  /* Make sure that padding and width stays in place */
   margin-top: 6px;
-  /* Add a top margin */
   margin-bottom: 16px;
-  /* Bottom margin */
-  resize: vertical
-    /* Allow the user to vertically resize the textarea (not horizontally) */
+  resize: vertical;
 }
 
-/* Style the submit button with a specific background color etc */
 input[type=submit] {
   background-color: #4caf99;
   color: rgb(255, 255, 255);
@@ -730,17 +395,167 @@ input[type=submit] {
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
   background-color: #4CAF50;
 }
 
-/* Add a background color and some padding around the form */
 .container {
   border-radius: 5px;
   background-color: #383838;
   padding: 20px;
   width: 50%;
   display: inline-block;
+}
 
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    font-family: inherit;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.popup-content p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+}
+
+.popup-close:hover {
+    color: #333;
+}
+
+.popup-link {
+    display: inline-block;
+    background-color: #0a66c2;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.popup-link:hover {
+    background-color: #084e96;
+}
+
+/* ==========================================================
+   10. MEDIA QUERIES (RESPONSIVE)
+   ========================================================== */
+@media screen and (max-width: 992px) {
+  .sidebar {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    background-color: white !important;
+    text-align: center;
+  }
+  .sidebar ul {
+    justify-content: center;
+    width: 100%;
+    padding-right: 40px;
+  }
+  .sidebar ul li {
+    display: inline-block;
+  }
+  .sidebar ul li a {
+    display: block;
+    padding: 5px;
+    font-weight: bold;
+  }
+  .logo-container img {
+    display: none;
+  }
+  div.header {
+    margin-right: 0;
+    padding: 0px 0px;
+    background-color: white;
+  }
+  .trabajos {
+    margin-left: 0 !important;
+  }
+  .col-3 { width: 49.3%; }
+  .col-4 { width: 32%; }
+}
+
+@media screen and (max-width: 768px) {
+  .logo-container img {
+    display: none;
+  }
+  .col-3 { width: 97.3%; }
+  .col-4 { width: 99%; }
+}
+/* ==========================================================
+   ACCESIBILIDAD: ENFOQUE VISIBLE POR TECLADO
+   ========================================================== */
+a.trabajo-link:focus-visible .trabajo,
+a.trabajo-link:focus-visible .trabajoArt {
+    outline: 2px solid #d4cb6a;
+    outline-offset: 4px;
+    background-color: rgba(177, 177, 177, 0.3);
+}
+
+.redondo:focus-visible {
+    outline: 2px solid #d4cb6a;
+    outline-offset: 2px;
+}
+
+/* Animación suave de aparición al cargar la página */
+body {
+    animation: fadeInPage 0.3s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
